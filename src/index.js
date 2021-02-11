@@ -7,12 +7,9 @@ const displayUser = async function () {
   const text = getELement("#text");
   const symbol = document.querySelectorAll(".symbol");
   const person = await user();
-
   userImg.src = person.pic;
   text.innerText = person.name;
-  console.log(symbol);
   symbol.forEach(function (sym) {
-    console.log(sym);
     sym.addEventListener("click", function () {
       switch (sym.id) {
         case "symbol1":
@@ -42,15 +39,13 @@ const displayUser = async function () {
 
 window.onload = function () {
   displayUser();
-  const random = document.getElementById("random");
-  random.addEventListener("click", function () {
-    displayUser();
-  });
-  const dark = document.querySelector("#dark");
+  const random = getELement("#random");
+  random.addEventListener("click", displayUser);
+  const dark = getELement("#dark");
   dark.addEventListener("click", function () {
     const body2 = document.querySelector("body");
     body2.classList.toggle("dark");
-    const centerDiv = document.getElementById("centerDiv");
+    const centerDiv = getELement("#centerDiv");
     centerDiv.classList.toggle("dark");
   });
 };
