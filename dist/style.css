@@ -1,0 +1,46 @@
+body {
+  background-color: rgb(91, 81, 180);
+}
+
+img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.body2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: black;
+  font-family: sans-serif;
+  font-size: 25px;
+  width: 100%;
+}
+
+.centerDiv {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(255, 251, 247);
+  padding: 5rem;
+  width: 50%;
+}
+
+.symbol {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.symbol:hover {
+  opacity: 1;
+}
