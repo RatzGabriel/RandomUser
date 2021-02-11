@@ -48,4 +48,14 @@ window.onload = function () {
     const centerDiv = getELement("#centerDiv");
     centerDiv.classList.toggle("dark");
   });
+
+  const hamburger = getELement(".hamburger");
+  const navLinks = getELement(".nav-links");
+  const links = document.querySelectorAll(".nav-links li");
+  hamburger.addEventListener("click", function () {
+    navLinks.classList.toggle("open");
+    links.forEach((link) => {
+      link.classList.toggle("fade");
+    });
+  });
 };
